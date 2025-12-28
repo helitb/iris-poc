@@ -7,4 +7,4 @@ env/
 .ipynb_checkpoints/
 *.swp
 *.swo
-pretrained_models/
+src/pretrained_models/
