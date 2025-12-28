@@ -22,7 +22,7 @@ huggingface-hub<0.24.0  # SpeechBrain depends on legacy use_auth_token argument
 
 # ASR
 faster-whisper>=1.0.0  # Primary ASR backend
-openai-whisper>=20231117  # Alternative (original Whisper)
+# openai-whisper>=20231117  # Alternative (original Whisper)
 
 # Hebrew ASR model (downloaded automatically by faster-whisper)
 # ivrit-ai/faster-whisper-v2-d4
@@ -40,5 +40,5 @@ sentence-transformers>=2.2.0
 # mypy>=1.0.0
 
 # Optional: Jupyter/Colab
-jupyter>=1.0.0
+# jupyter>=1.0.0
 # ipywidgets>=8.0.0

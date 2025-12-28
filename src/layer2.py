@@ -16,6 +16,7 @@ from .formatting import build_layer2_prompt
 from .session import Layer2Batch
 
 
+
 class Layer2Composer:
     """Generates Layer 2 events given Layer 1 input."""
 

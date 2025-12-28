@@ -7,7 +7,9 @@ This is the critical boundary where:
 3. Structured events are created for persistence
 
 Privacy note: After conversion, no raw content should remain.
+
 """
+from __future__ import annotations
 
 from datetime import datetime, timedelta
 from typing import List, Optional, Dict
@@ -52,7 +54,7 @@ def _import_schema():
     
     try:
         # When iris is installed as a package
-        from iris.schema import (
+        from src.schema import (
             Actor, ActorRole,
             SpeechEvent, AmbientAudioEvent,
             SpeechTarget, VocalType, VerbalComplexity,

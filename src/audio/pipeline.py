@@ -560,9 +560,9 @@ def process_audio_file(
 
 if __name__ == "__main__":
     # Simple test
-    print(f"Testing audio pipeline with sample file... file: ../data/audio/slice1_audio.wav")
-    with open("../data/audio/slice1_audio.wav", "rb") as f:
-        test_events = process_audio_file("../data/audio/slice1_audio.wav", config=PipelineConfig(debug=True))
+    print(f"Testing audio pipeline with sample file... file: data/audio/slice1_audio.wav")
+    with open("data/audio/slice1_audio.wav", "rb") as f:
+        test_events = process_audio_file("data/audio/slice1_audio.wav", config=PipelineConfig(debug=True))
         for event in test_events:
             print(event)
     print(f"Processed {len(test_events)} events from test audio file.")
