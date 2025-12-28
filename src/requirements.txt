@@ -1,0 +1,44 @@
+# IRIS Audio Pipeline Dependencies
+# ================================
+
+# Core
+numpy<2.0.0 # current torch version compatibility
+
+# Audio I/O
+soundfile>=0.12.0
+#librosa>=0.10.0  # For resampling (optional but recommended)
+
+# VAD
+torch>=2.0.0  # For Silero VAD
+torchaudio>=2.0.0  # For Silero VAD
+silero-vad>=1.0.0  # Silero VAD wrapper
+# webrtcvad>=2.0.10  # Alternative lightweight VAD (optional)
+
+# Speaker Diarization (choose one)
+# resemblyzer>=0.1.3  # Recommended - good balance of quality and speed
+speechbrain>=1.0.0  # Alternative - higher quality, heavier
+# pyannote.audio>=3.0  # Alternative - state of the art
+huggingface-hub<0.24.0  # SpeechBrain depends on legacy use_auth_token argument
+
+# ASR
+faster-whisper>=1.0.0  # Primary ASR backend
+openai-whisper>=20231117  # Alternative (original Whisper)
+
+# Hebrew ASR model (downloaded automatically by faster-whisper)
+# ivrit-ai/faster-whisper-v2-d4
+
+# Prosody Analysis
+praat-parselmouth>=0.4.3
+
+# Text Embeddings (for echolalia detection)
+sentence-transformers>=2.2.0
+
+# Optional: Development
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# mypy>=1.0.0
+
+# Optional: Jupyter/Colab
+jupyter>=1.0.0
+# ipywidgets>=8.0.0
