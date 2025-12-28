@@ -8,7 +8,6 @@ Uses lightweight embedding models suitable for edge deployment.
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, field
 import numpy as np
-import speechbrain
 
 from .types import SpeechSegment, DiarizedSegment, SAMPLE_RATE
 
