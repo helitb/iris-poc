@@ -144,6 +144,17 @@ class HebrewASR:
         Returns:
             ASRResult with transcription and metadata
         """
+        self._debug(
+            f"SKIPPING Transcribing audio len={len(audio)} sr={sample_rate} "
+            f"DEBUG DEBUG"
+        )
+        return ASRResult(
+            text="ASR transcription skipped in debug mode.",
+            language=self.language,
+            confidence=None,
+            words=[],
+        )
+    '''
         self._load_model()
         self._debug(
             f"Transcribing audio len={len(audio)} sr={sample_rate} "
@@ -207,7 +218,8 @@ class HebrewASR:
             confidence=avg_confidence,
             words=words,
         )
-    
+        '''
+        
     def _resample(
         self,
         audio: np.ndarray,
