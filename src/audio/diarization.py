@@ -95,8 +95,10 @@ class SpeakerDiarizer:
         if self._encoder is not None:
             return
         
-        self._debug(f"Loading encoder backend={self.backend}")
-        
+        self._debug(f"Loading encoder backend=speechbrain")
+        self._load_speechbrain()
+
+        ''''
         if self.backend == "resemblyzer":
             self._load_resemblyzer()
         elif self.backend == "speechbrain":
@@ -105,6 +107,7 @@ class SpeakerDiarizer:
             self._load_pyannote()
         else:
             raise ValueError(f"Unknown backend: {self.backend}")
+        '''
     
     def _load_resemblyzer(self):
         """Load Resemblyzer embedding model."""
