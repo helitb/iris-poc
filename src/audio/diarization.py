@@ -97,6 +97,8 @@ class SpeakerDiarizer:
         
         self._debug(f"Loading encoder backend=speechbrain")
         self._load_speechbrain()
+        self._debug(f"Loaded encoder backend=speechbrain")
+        
 
         ''''
         if self.backend == "resemblyzer":
